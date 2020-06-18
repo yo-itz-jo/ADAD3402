@@ -1,0 +1,15 @@
+float noiseScale = 1.0;
+void setup() {
+size(1200, 800);
+}
+void draw() {
+background(000);
+for (int x = 0; x < width; x++){
+for(int y = 0; y < height; y++){
+float noiseVal = noise(x*noiseScale, y*noiseScale);
+float ranN = random(10,255);
+stroke(noiseVal*ranN);
+point(x, y);
+}
+}
+}
